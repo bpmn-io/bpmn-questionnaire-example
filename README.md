@@ -7,53 +7,16 @@ This example uses bpm-questionnaire embed a questionnaire on BPMN 2.0 into a web
 
 ## Usage Summary
 
-Install bpmn-js via bower
+Install bpmn-js via npm
 
 ```
-bower install --save bpmn-js
-```
-
-Embed it into a website
-
-```
-<script src="bower_components/bpmn-questionnaire/dist/bpmn-questionnaire.js"></script>
+npm install --save bpmn-js
 ```
 
 Use it in your application
 
 ```
-// Create your own type
-var single = BpmnQuestionnaire.createType({
-  renderQuestion: function () {
-    // ...
-  },
-  renderResult: function() {
-    // ...
-  },
-  addToState: {
-    // ...
-  },
-  checkIfValidAnswer: function() {
-    // ...
-  },
-  checkIfRightAnswer: function() {
-    // ...
-  }
-});
-
-var q = new BpmnQuestionnaire({
-
-  // Your container (can be a string of an id or an element)
-  container: 'container',
-
-  // Your questionnaire
-  questionnaire: questionnaire,
-
-  // Your types
-  types: {
-    single: single
-  }
-});
+var BpmnQuestionnaire = require('bpmn-questionnaire');
 ```
 
 ## Licence

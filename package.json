@@ -1,0 +1,33 @@
+{
+  "name": "bpmn-questionnaire-example",
+  "version": "0.1.0",
+  "description": "Example project that makes use of the bpmn-questionnaire library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PHILIPPFROMME/bpmn-questionnaire-example.git"
+  },
+  "keywords": [
+    "bpmn-questionnaire",
+    "example"
+  ],
+  "author": "Philipp Fromme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PHILIPPFROMME/bpmn-questionnaire-example/issues"
+  },
+  "homepage": "https://github.com/PHILIPPFROMME/bpmn-questionnaire-example#readme",
+  "dependencies": {
+    "bpmn-questionnaire": "1.0.5"
+  },
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-browserify": "4.0.1",
+    "grunt-contrib-watch": "0.6.1",
+    "lodash": "4.2.1",
+    "virtual-dom": "2.1.1"
+  }
+}
