@@ -19,8 +19,8 @@ It then hooks up for the 'results' event, to retrieve the results once the quest
 
 ```
 q.on('results', function(results) {
-          console.log(results);
-        });
+  console.log(results);
+});
 ```
 
 ## Usage Summary
