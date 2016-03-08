@@ -1,22 +1,46 @@
 # bpmn-questionnaire Example
-Example project that makes use of the bpmn-questionnaire library
 
 ## About
 
-This example uses bpm-questionnaire embed a questionnaire on BPMN 2.0 into a web application.
+This example showcases the usage of bpmn-questionnaire to embed a questionnaire into a website. It uses [three types of questions](https://github.com/bpmn-io/bpmn-questionnaire-example/tree/master/client/types).
+
+```
+var q = new BpmnQuestionnaire({
+  container: 'container',
+  questionnaireJson: questionnaireJson,
+  types: {
+    interactive: interactive,
+    multiple:    multiple,
+    single:      single
+  }
+});
+```
+It then hooks up for the 'results' event, to retrieve the results once the questionnaire is finished.
+
+```
+q.on('results', function(results) {
+          console.log(results);
+        });
+```
 
 ## Usage Summary
 
-Install bpmn-js via npm
+Install dependencies via npm
 
 ```
-npm install --save bpmn-js
+npm install
 ```
 
-Use it in your application
+Build the application
 
 ```
-var BpmnQuestionnaire = require('bpmn-questionnaire');
+grunt auto-build
+```
+
+Finally you have to fire up a server for example by using Python 3
+
+```
+python -m http.server
 ```
 
 ## Licence
