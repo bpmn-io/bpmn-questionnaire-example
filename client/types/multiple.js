@@ -15,14 +15,11 @@ var multiple = BpmnQuestionnaire.createType({
     var that = this;
     var buttons = [];
     this.options.answers.forEach(function(answer) {
-
-      console.log(that.state);
-
       buttons.push(
         h('button', {
-          className: 'btn btn-block' + (that.state.selected.indexOf(answer) !== -1 ? ' btn-success' : ''), 
+          className: 'btn btn-block' + (that.state.selected.indexOf(answer) !== -1 ? ' btn-success' : ''),
           onclick: function() {
-            
+
             // Clone array
             var selected = that.state.selected.slice(0);
 
@@ -31,13 +28,11 @@ var multiple = BpmnQuestionnaire.createType({
             } else {
               selected.push(answer);
             }
-            
+
             // Push updates
             that.update({
               selected: selected
             });
-
-            console.log(selected);
           },
           style: {
             marginTop:    '5px',
@@ -47,7 +42,7 @@ var multiple = BpmnQuestionnaire.createType({
       );
     });
 
-    var html = 
+    var html =
       h('div', [
         h('p', this.options.text),
         this.diagram ? this.diagram.render(this.state) : h('div'),
@@ -64,7 +59,7 @@ var multiple = BpmnQuestionnaire.createType({
     var html;
 
     if (this.state.rightAnswer) {
-      html = 
+      html =
         h('div.panel.panel-success', [
             h('div.panel-heading',
               h('h3.panel-title', 'Glückwunsch!')

@@ -14,7 +14,8 @@ var url = "../resources/questionnaire.json";
 xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
         var questionnaireJson = JSON.parse(xhr.responseText);
-        
+
+        // Spin up questionnaire
         var q = new BpmnQuestionnaire({
           container: 'container',
           questionnaireJson: questionnaireJson,
@@ -23,6 +24,11 @@ xhr.onreadystatechange = function() {
             multiple:    multiple,
             single:      single
           }
+        });
+
+        // Hook up for 'results' event
+        q.on('results', function(results) {
+          console.log(results);
         });
 
     }
