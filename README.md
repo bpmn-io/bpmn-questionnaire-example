@@ -40,8 +40,10 @@ grunt auto-build
 Finally you have to fire up a server for example by using Python 3
 
 ```
-python -m http.server
+python -m http.server 8000
 ```
+
+Go to `localhost:8000/dist` to see the example in action.
 
 ## Licence
 
